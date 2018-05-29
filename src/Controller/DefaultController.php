@@ -3,12 +3,10 @@
 // src/Controller/DefaultController.php
 namespace App\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController {
+class DefaultController extends Controller {
     public function index() {
-        return new Response(
-            'kdAstro'
-        );
+        return $this->render('index.html.twig');
     }
 }
