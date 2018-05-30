@@ -36,7 +36,8 @@
           <div class="col-md-6">
             <div class="form-group">
               <label class="text-info">CPF</label>
-              <input class="form-control" type="text" name="cpf" id="cpf" minlength="11" maxlength="11" placeholder="12345678910" required>
+              <input class="form-control" type="text" name="cpf" id="cpf" minlength="11" maxlength="11" onblur="validateCPF()" placeholder="12345678909" required>
+              <small class="text-danger" id="cpf-warning"></small>
             </div>
           </div>
         </div>
