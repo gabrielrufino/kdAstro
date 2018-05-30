@@ -23,20 +23,20 @@
       <form action="/registrar">
         <div class="form-group">
           <label class="text-info">Nome Completo</label>
-          <input class="form-control" type="text" maxlength="995" placeholder="Insira Seu Nome Completo Aqui" required>
+          <input class="form-control" type="text" name="nome" id="nome" maxlength="995" placeholder="Insira Seu Nome Completo Aqui" required>
         </div>
         
         <div class="form-row">
           <div class="col-md-6">
             <div class="form-group">
               <label class="text-info">Data de Nascimento</label>
-              <input class="form-control" type="date" required>
+              <input class="form-control" name="nascimento" id="nascimento" type="date" required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="text-info">CPF</label>
-              <input class="form-control" type="text" minlength="11" maxlength="11" placeholder="12345678910" required>
+              <input class="form-control" type="text" name="cpf" id="cpf" minlength="11" maxlength="11" placeholder="12345678910" required>
             </div>
           </div>
         </div>
@@ -47,14 +47,14 @@
           <div class="col-md-3">
             <div class="form-group">
               <label class="text-info">CEP</label>
-              <input class="form-control" type="text" minlength="8" maxlength="9" placeholder="54100-310" required>
+              <input class="form-control" type="text" name="cep" id="cep" minlength="8" maxlength="8" onblur="fillAddresses()" placeholder="54100310" required>
             </div>
           </div>
           <div class="col-md-9">
             <div class="form-group">
               <label class="text-info">Estado</label>
-              <select class="form-control" required>
-                <option disabled selected>Selecione seu estado</option>
+              <select class="form-control" name="estado" id="estado" required>
+                <option value="" selected disabled>Selecione seu estado</option>
                 <option value="AC">Acre</option>
                 <option value="AL">Alagoas</option>
                 <option value="AP">Amapá</option>
@@ -91,13 +91,13 @@
           <div class="col-md-6">
             <div class="form-group">
               <label class="text-info">Cidade</label>
-              <input class="form-control" type="text" maxlength="100" placeholder="Sua Cidade" required>
+              <input class="form-control" type="text" name="cidade" id="cidade" maxlength="100" placeholder="Sua Cidade" required>
             </div>
           </div>
           <div class="col-md-6">
             <div class="form-group">
               <label class="text-info">Bairro</label>
-              <input class="form-control" type="text" maxlength="100" placeholder="Seu Bairro" required>
+              <input class="form-control" type="text" name="bairro" id="bairro" maxlength="100" placeholder="Seu Bairro" required>
             </div>
           </div>
         </div>
@@ -106,25 +106,29 @@
           <div class="col-md-9">
             <div class="form-group">
               <label class="text-info">Endereço</label>
-              <input class="form-control" type="text" maxlength="100" placeholder="Seu Endereço" required>
+              <input class="form-control" type="text" name="endereco" id="endereco" maxlength="100" placeholder="Seu Endereço" required>
             </div>
           </div>
           <div class="col-md-3">
             <div class="form-group">
               <label class="text-info">Número</label>
-              <input class="form-control" type="number" placeholder="Número">
+              <input class="form-control" type="number" name="numero" id="numero" placeholder="Número">
             </div>
           </div>
         </div>
 
         <div class="form-group">
           <label class="text-info">Complemento</label>
-          <input class="form-control" type="text" maxlength="100" placeholder="Complemento do Endereço">
+          <input class="form-control" type="text" name="complemento" id="complemento" maxlength="100" placeholder="Complemento do Endereço">
         </div>
 
         <button type="submit" class="btn btn-info btn-block">Cadastrar</button>
       </form>
     </div>
+
+
+    <!-- kdAstro Functions -->
+    <script src="kdAstro.js"></script>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
