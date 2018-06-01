@@ -1,6 +1,6 @@
 <?php
 
-// src/Controller/DefaultController.php
+// src/Controller/RegisterController.php
 namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -8,14 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 
-class DefaultController extends Controller {
-	/**
-	 * @Route("/", name="index")
-	 */
-	public function index() {
-		return $this->render('index.html.twig');
-	}
-	
+class RegisterController extends Controller {	
 	/**
 	 * @Route("/register", name="register")
 	 */
@@ -39,19 +32,5 @@ class DefaultController extends Controller {
 		} else {
 			return $this->redirectToRoute('error');
 		}
-	}
-
-	/**
-	 * @Route("/success", name="success")
-	 */
-	public function success() {
-		return $this->render('success.html.twig');
-	}
-
-	/**
-	 * @Route("/error", name="error")
-	 */
-	public function error() {
-		return $this->render('error.html.twig');
 	}
 }
