@@ -22,12 +22,12 @@ class Cadastro
     private $nome;
 
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string", length=10)
      */
     private $nascimento;
 
     /**
-     * @ORM\Column(type="string", length=11)
+     * @ORM\Column(type="string", length=11, unique=true)
      */
     private $cpf;
 
@@ -83,12 +83,12 @@ class Cadastro
         return $this;
     }
 
-    public function getNascimento(): ?\DateTimeInterface
+    public function getNascimento(): ?string
     {
         return $this->nascimento;
     }
 
-    public function setNascimento(\DateTimeInterface $nascimento): self
+    public function setNascimento(string $nascimento): self
     {
         $this->nascimento = $nascimento;
 
