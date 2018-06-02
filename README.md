@@ -64,3 +64,14 @@ php bin/console doctrine:migrations:migrate
 </pre>
 
 Esse comando faz com que nossa idealização da tabela no projeto seja efetivamente construída como planejamos.
+
+
+## kdAstro pronto!
+
+Execute:
+<pre>
+php -S localhost:3000 -t public
+</pre>
+
+A partir de agora, podemos acessar http://localhost:3000 e testar de forma completa a aplicação construída principalmente em <strong>Symfony4 + MySQL + Bootstrap</strong>.
+ 
