@@ -34,10 +34,11 @@ Antes de tudo, é essencial que você tenha o servidor do MySQL inicializado cor
 
 ### DATABASE_URL
 
-Um dos arquivos gerados após a instalação das dependências é o <pre>.env</pre> em seu diretório principal, arquivo responsável por registrar nossas variáveis de ambiente. Acesse-o e configure a variável que define o <pre>DATABASE_URL</pre> da seguinte forma:
+Um dos arquivos gerados após a instalação das dependências é o <code>.env</code> em seu diretório principal, arquivo responsável por registrar nossas variáveis de ambiente. Acesse-o e configure a variável que define o <code>DATABASE_URL</code> da seguinte forma:
 
-Edite:
+<strong>Edite:</strong>
 <pre>
+# .env
 # ...
 DATABASE_URL=mysql://user:pass@127.0.0.1:3306/kdastro
 # ...
@@ -49,7 +50,7 @@ De forma que <strong>user</strong> é o seu usuário do MySQL e <strong>pass</st
 
 Estamos em um ponto em que o MySQL já está a postos para trabalhar, já apontamos para o servidor em que nossa aplicação irá se conectar. <strong>Precisamos apertar o gatilho e criar nosso banco de dados</strong>. É fácil!
 
-Execute:
+<strong>Execute:</strong>
 <pre>
 php bin/console doctrine:database:create
 </pre>
@@ -58,7 +59,7 @@ php bin/console doctrine:database:create
 
 O banco de dados instanciado por si só não é suficiente, precisamos criar uma tabela que agregue todos os nossos cadastros.
 
-Execute:
+<strong>Execute:</strong>
 <pre>
 php bin/console doctrine:migrations:migrate
 </pre>
@@ -68,7 +69,7 @@ Esse comando faz com que nossa idealização da tabela no projeto seja efetivame
 
 ## kdAstro pronto!
 
-Execute:
+<strong>Execute:</strong>
 <pre>
 php -S localhost:3000 -t public
 </pre>
