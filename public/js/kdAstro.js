@@ -1,6 +1,6 @@
 /* Validate CPF */
 
-const validateCPF = (CPF) => { // Adaptação de https://gist.github.com/suissa/5fc99521933c386bcb905201bdd48c76
+const validateCPF = (CPF) => { // https://gist.github.com/suissa/5fc99521933c386bcb905201bdd48c76
   CPF = document.getElementById('cpf').value
 
   const mod11 = (num) => num % 11
