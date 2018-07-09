@@ -4,6 +4,7 @@
 namespace App\Controller;
 
 use App\Entity\Cadastro;
+use App\Utils\Validate;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
@@ -28,6 +29,14 @@ class RegisterController extends Controller {
 			'complemento' => $request->request->get('complemento')
 		);
 
+
+		$validate = new Validate;
+
+		$filled = $validate->isFilled($data);
+		if (!$filled) {
+			return $this->redirectToRoute('error');
+		}
+
 		$cadastros = $this->getDoctrine()->getRepository(Cadastro::class);
 		
 		$sucesso = !$cadastros->findOneBy(['cpf' => $data['cpf']]);
@@ -51,7 +60,7 @@ class RegisterController extends Controller {
 			
 			return $this->redirectToRoute('success');
 		} else {
-			return $this->redirectToRoute('error');
+			return $this->redirectToRoute('invalid');
 		}
 	}
 }

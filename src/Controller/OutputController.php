@@ -20,4 +20,11 @@ class OutputController extends Controller {
 	public function error() {
 		return $this->render('error.html.twig');
 	}
+
+	/**
+	 * @Route("/invalid", name="invalid")
+	 */
+	public function invalid() {
+		return $this->render('invalid.html.twig');
+	}
 }

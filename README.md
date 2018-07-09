@@ -76,3 +76,18 @@ php -S localhost:3000 -t public
 
 A partir de agora, podemos acessar http://localhost:3000 e testar de forma completa a aplicação construída principalmente em <strong>Symfony4 + MySQL + Bootstrap</strong>.
  
+## Detalhes do Cadastro
+
+
+<ul>
+	<li>Nome completo *<li>
+	<li>Data de Nascimento *<li>
+	<li>CPF *</li>
+	<li>Estado *</li>
+	<li>Cidade *</li>
+	<li>CEP *</li>
+	<li>Endereço *</li>
+	<li>Bairro *</li>
+	<li>Número</li>
+	<li>Complemento</li>
+<ul>
